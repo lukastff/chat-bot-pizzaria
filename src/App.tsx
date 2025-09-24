@@ -1,11 +1,13 @@
+import ChatBot from "./components/ChatBot";
 import ChatList from "./components/ChatList";
 import Sidebar from "./components/Sidebar";
 
 function App() {
   return (
-    <div className="flex h-screen w-screen font-sans bg-[#222323] overflow-hidden">
+    <div className="flex h-screen w-screen font-sans bg-[#1d1d1d] overflow-hidden">
       <Sidebar />
       <ChatList />
+      <ChatBot />
     </div>
   );
 }

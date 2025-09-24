@@ -1,6 +1,6 @@
 function ChatList() {
   return (
-    <div className="border-x-[0.5px] border-[#6d6d6d] text-white p-5 max-w-[565px] w-full h-full">
+    <div className="bg-[#222323] border-x-[0.5px] border-[#6d6d6d] text-white p-5 max-w-[565px] w-full h-full">
       <h1 className="text-[25px] font-bold mb-[20px]">WhatsApp</h1>
       <input
         className="w-full h-[40px] px-[20px] bg-white rounded-[50px] mb-[40px] text-black"
