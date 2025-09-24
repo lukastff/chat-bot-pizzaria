@@ -8,14 +8,14 @@ function Sidebar() {
     <div className="h-screen bg-[#1d1d1d] p-[6px] py-[20px] flex flex-col justify-between items-center">
       <div>
         <div className="p-2 space-y-10">
-          <img className="w-8" src={comentario} alt="" />
-          <img className="w-8" src={status} alt="" />
-          <img className="w-8" src={comunidade} alt="" />
+          <img className="w-[24px]" src={comentario} alt="" />
+          <img className="w-[24px]" src={status} alt="" />
+          <img className="w-[24px]" src={comunidade} alt="" />
         </div>
       </div>
       <div>
         <div className="flex flex-col justify-between items-center p-2 space-y-10">
-          <img className="w-8" src={configuracoes} alt="" />
+          <img className="w-[24px]" src={configuracoes} alt="" />
           <div className="w-[45px] h-[45px] rounded-[50%] bg-white"></div>
         </div>
       </div>

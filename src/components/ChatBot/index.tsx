@@ -1,4 +1,5 @@
 import search from "../../assets/procurar.png";
+import play from "../../assets/play.png";
 
 function ChatBot() {
   return (
@@ -16,10 +17,16 @@ function ChatBot() {
         <div className="w-full max-w-[95%] mx-auto text-white flex flex-col">
           <div>Texto da IA</div>
           <div className="self-end">Texto Myself</div>
-          <input
-            className="w-[100%] h-[40px] rounded-[50px] mb-[16px] mt-[24px] bg-[#3b3b3b] px-[40px]"
-            type="text"
-          />
+          <form className="relative" action="" method="post">
+            <input
+              className="w-[100%] h-[40px] rounded-[50px] mb-[16px] mt-[24px] bg-[#3b3b3b] px-[40px]"
+              type="text"
+              placeholder="Como eu posso te ajudar?"
+            />
+            <button className="w-[20px] absolute top-[33px] right-[15px] cursor-pointer">
+              <img src={play} alt="" />
+            </button>
+          </form>
         </div>
       </div>
     </div>
