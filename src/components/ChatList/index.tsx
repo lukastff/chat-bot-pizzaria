@@ -7,9 +7,9 @@ function ChatList() {
         type="text"
       />
       <ul>
-        <li className="flex gap-5">
-          <div className="w-[45px] h-[45px] rounded-[50%] bg-white"></div>
-          <div className="flex flex-col justify-between">
+        <li className="relative flex gap-5 before:absolute before:content[''] before:top-[-15px] before:left-[-10px] before:w-[calc(100%+20px)] before:h-[calc(100%+30px)] before:bg-transparent hover:before:bg-[#1d1d1d] before:z-1 before:rounded-[5px] cursor-pointer">
+          <div className="w-[45px] h-[45px] rounded-[50%] bg-white z-2"></div>
+          <div className="flex flex-col justify-between z-2">
             <p>Pizza Hut</p>
             <p className="text-white opacity-50 text-xs">ULTIMA MSG</p>
           </div>

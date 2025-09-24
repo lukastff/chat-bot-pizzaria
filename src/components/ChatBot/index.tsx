@@ -12,8 +12,8 @@ function ChatBot() {
           <img src={search} className="w-6" />
         </div>
       </div>
-      <div className="py-[10px] px-[16px] bg-[#1d1d1d]">
-        <div className="max-w-[95%] mx-auto text-white flex flex-col">
+      <div className="py-[10px] px-[16px] h-full flex flex-col justify-end">
+        <div className="w-full max-w-[95%] mx-auto text-white flex flex-col">
           <div>Texto da IA</div>
           <div className="self-end">Texto Myself</div>
           <input
