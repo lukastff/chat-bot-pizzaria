@@ -4,7 +4,7 @@ import Sidebar from "./components/Sidebar";
 
 function App() {
   return (
-    <div className="flex h-screen w-screen font-sans bg-[#1d1d1d] overflow-hidden">
+    <div className="flex h-screen w-screen font-sans bg-[#1d1d1d] text-white overflow-hidden">
       <Sidebar />
       <ChatList />
       <ChatBot />
