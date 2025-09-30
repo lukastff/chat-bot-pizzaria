@@ -28,10 +28,12 @@ Este é um projeto full stack monolítico para um atendente virtual de pizzaria 
 1. adicione ao `.env` sua chave de API do DeepSeek:
 
 ```env
+PORT=3001
 DEEPSEEK_API_KEY=your_deepseek_api_key_here
+FRONTEND_URL=http://localhost:3000
+NODE_ENV=development
+DATABASE_URL="file:./prisma/dev.db"
 ```
-
-> Caso não possua uma chave, entre em contato com o desenvolvedor para obter uma temporária.
 
 ---
 
