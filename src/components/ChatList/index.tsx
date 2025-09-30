@@ -1,6 +1,8 @@
+import "./styles.css";
+
 function ChatList() {
   return (
-    <div className="bg-[#222323] border-x-[0.5px] border-[#6d6d6d] text-white p-5 max-w-[565px] w-full h-full">
+    <section className="bg-[#222323] border-r-[0.5px] border-[#6d6d6d] text-white p-5 max-w-[565px] w-full h-full chat-list">
       <h1 className="text-[25px] font-bold mb-[20px]">WhatsApp</h1>
       <input
         className="w-full h-[40px] px-[20px] bg-white rounded-[50px] mb-[40px] text-black"
@@ -15,7 +17,7 @@ function ChatList() {
           </div>
         </li>
       </ul>
-    </div>
+    </section>
   );
 }
 

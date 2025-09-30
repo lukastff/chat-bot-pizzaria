@@ -1,0 +1,5 @@
+.list-bar {
+  @media screen and (max-width: 470px) {
+    display: none;
+  }
+}
