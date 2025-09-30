@@ -1,75 +1,70 @@
-# React + TypeScript + Vite
+# Bot Pizzaria
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um projeto full stack monolítico para um atendente virtual de pizzaria com IA. Ele utiliza **DeepSeek** como modelo de linguagem, comunicação em tempo real com **WebSocket**, e armazena o histórico em **SQLite** via **Prisma ORM**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tecnologias
 
-## React Compiler
+- **Frontend**: React + Vite + TypeScript --> [Projeto Frontend](https://github.com/lukastff/chat-bot-pizzaria/)
+- **Backend**: Node.js + TypeScript + WebSocket --> [Projeto Backend](https://github.com/lukastff/chat-bot-pizzaria-backend)
+- **IA**: DeepSeek API
+- **Banco de Dados**: SQLite via Prisma ORM
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+---
 
-Note: This will impact Vite dev & build performances.
+## Como Rodar o Projeto
 
-## Expanding the ESLint configuration
+### Pré-requisitos
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- [Node.js 18+](https://nodejs.org/)
+- (Opcional) [npm](https://npm.io/) para gerenciamento de pacotes
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+##  Variáveis de Ambiente
+
+1. adicione ao `.env` sua chave de API do DeepSeek:
+
+```env
+DEEPSEEK_API_KEY=your_deepseek_api_key_here
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+> Caso não possua uma chave, entre em contato com o desenvolvedor para obter uma temporária.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Prisma (uso local opcional)
+
+```bash
+cd backend
+npm install
+npx prisma generate
+npx prisma migrate dev --name init
+npm run dev
 ```
+
+---
+
+##  Frontend Local
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+---
+
+## WebSocket
+
+O backend expõe um WebSocket para conversas em tempo real via `socket.io`. A comunicação é iniciada automaticamente no frontend com base no `window.location.hostname`.
+
+---
+
+## Histórico de Conversas
+
+Toda troca de mensagens é armazenada no SQLite. Ao reabrir o chat, o histórico é recuperado automaticamente.
+
+
